@@ -1,0 +1,7 @@
+package com.example.asrbank.repository;
+
+import com.example.asrbank.model.LoanApplication;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LoanRepository extends JpaRepository<LoanApplication, Long> {
+}
