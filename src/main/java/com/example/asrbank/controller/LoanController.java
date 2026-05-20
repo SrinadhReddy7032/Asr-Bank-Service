@@ -19,6 +19,10 @@ public class LoanController {
 
     }
 
+	@GetMapping("/hello")
+    public String hello() {
+        return "Hello Jenkins";
+    }
     @PostMapping("/verify")
     public ResponseEntity<String> applyLoan(@RequestBody LoanRequest request) {
         String aadhaarResult = aadhaarService.verifyAadhaar(request.getAadhaar());
