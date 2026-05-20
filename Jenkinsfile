@@ -2,13 +2,12 @@ pipeline {
 
     agent any
 
-    stages {
+    tools {
+        maven 'Maven'
+        jdk 'Java17'
+    }
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/SrinadhReddy7032/Asr-Bank-Service.git'
-            }
-        }
+    stages {
 
         stage('Build') {
             steps {
@@ -19,7 +18,7 @@ pipeline {
         stage('Run Application') {
             steps {
                 bat '''
-                start cmd /c "java -jar target/demo-0.0.1-SNAPSHOT.jar"
+                start cmd /c "java -jar target/Asr-Bank-Service-0.0.1-SNAPSHOT.jar"
                 '''
             }
         }
