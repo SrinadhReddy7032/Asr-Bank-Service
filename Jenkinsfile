@@ -11,7 +11,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/SrinadhReddy7032/bank.git'
+                git 'https://github.com/SrinadhReddy7032/Asr-Bank-Service.git'
             }
         }
 
